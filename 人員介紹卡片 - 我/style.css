@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+html,body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    background-color: #a9fff8;
+}
+
+.wrap {
+    width: 1200px;
+    display: flex;
+    margin: auto;
+}
+
+.wrap .item {
+    width: 368px;
+    margin: 15px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    transform: translateY(0px);
+    transition: .5s;
+}
+
+.wrap .item:hover {
+    transform: translateY(-50px);
+}
+
+.wrap .item:hover .txt {
+    background-image: linear-gradient(0deg, #fb8076, #fe885d);
+}
+
+.wrap .item:hover .txt::before {
+    border-left: 184px solid #fe885d;
+    border-right: 184px solid #fe885d;
+}
+
+.wrap .item img {
+    width: 100%;
+    height: 60%;
+    vertical-align: middle;
+}
+
+.wrap .item .txt {
+    padding: 20px;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.wrap .item .txt::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 1px;
+    border-top: 50px solid transparent;
+    border-left: 184px solid #fff;
+    border-right: 184px solid #fff;
+    transform: translateY(-100%);
+}
+
+.wrap .item .txt h2 {
+    border-bottom: 1px solid #888;
+    padding-bottom: .3em;
+    margin-bottom: .4em;
+    font-weight: 900;
+    transition: .25s;
+}
+
+.wrap .item:hover .txt h2 {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.wrap .item .txt p {
+    line-height: 1.6;
+    font-weight: 500;
+    transition: .25s;
+}
+
+.wrap .item:hover .txt p {
+    color: #fff;
+}
